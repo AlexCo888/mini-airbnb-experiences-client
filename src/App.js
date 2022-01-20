@@ -12,7 +12,9 @@ const App = () => {
   }, []);
 
   const getData = async () => {
-    const response = await fetch("http://localhost:5000/data");
+    const response = await fetch(
+      "https://airbnb-full-stack-experiences.herokuapp.com/data"
+    );
     const jsonData = await response.json();
     setData(jsonData.data);
   };
